@@ -136,7 +136,7 @@ app.post("/questions", middleware.isLoggedIn, function (req, res) {
 });
 
 // new question form rendering
-app.get("/questions/new", function (req, res) {
+app.get("/questions/new", middleware.isLoggedIn, function (req, res) {
   res.render("questions/new");
 });
 
@@ -156,17 +156,21 @@ app.get("/questions/:id", function (req, res) {
 });
 
 // ----------------------------------------------------answers
-app.get("/questions/:id/answers/new", function (req, res) {
-  Question.findById(req.params.id, function (err, question) {
-    if (err) {
-      console.log(err);
-    } else {
-      res.render("answers/new", { question: question });
-    }
-  });
-});
+app.get(
+  "/questions/:id/answers/new",
+  middleware.isLoggedIn,
+  function (req, res) {
+    Question.findById(req.params.id, function (err, question) {
+      if (err) {
+        console.log(err);
+      } else {
+        res.render("answers/new", { question: question });
+      }
+    });
+  }
+);
 
-app.post("/questions/:id/answers", function (req, res) {
+app.post("/questions/:id/answers", middleware.isLoggedIn, function (req, res) {
   Question.findById(req.params.id, function (err, question) {
     if (err) {
       console.log(err);

@@ -8,3 +8,5 @@
 <%question.answers.forEach(function (answer) {%>
     <p><%= answer.author %> - <%= answer.ans %> </p>
 <% }) %> 
+
+<a href="/questions/<%= question._id%>/answers/new">Add new answer</a>

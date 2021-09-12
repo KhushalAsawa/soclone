@@ -2,13 +2,7 @@ var mongoose = require("mongoose");
 
 var answerSchema = new mongoose.Schema({
   ans: String,
-  author: {
-    id: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-    },
-    username: String,
-  },
+  author: String,
 });
 
 module.exports = mongoose.model("Answer", answerSchema);

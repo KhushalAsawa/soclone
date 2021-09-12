@@ -4,20 +4,20 @@ var Answer = require("./models/answer");
 
 var data = [
   {
-    title: "Cloud's Rest",
-    tags: "Hello",
+    title: "How does front-end (React) interact with back-end (Express)?",
+    tags: "#react",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "I'm building a full stack app using MongoDB, Express, React, and Node. I've worked on projects with only front-end programming and I've worked on projects with only back-end programming. I used ejs to create views for Express, so I'm not sure how it would work with front-end views created through React. Also, I'm not sure how the CRUD operations would be used with React. I have very vague ideas.",
   },
   {
-    title: "Cloud's Rest",
-    tags: "Hello",
+    title: "Install mongoose by npm in Windows [duplicate]",
+    tags: "#mongoose",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "CViejo, thanks for the link, where I found a lot of information on my topic. Usually, this problem is solved by installing Python 2.7 + Visual studio 2010. Иut in my case there were problems with the operating system, just could not understand that. As a solution, I installed new Windows7(64) + Phyton 2.7.1 + Visual studio 2013 + nodeJS (x86). and try npm install mongoose - it work",
   },
   {
-    title: "Cloud's Rest",
-    tags: "Hello",
+    title: "Stack overflow when testing with jest",
+    tags: "#jest",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
   },
@@ -45,8 +45,8 @@ function seedDB() {
             //create a Answer
             Answer.create(
               {
-                ans: "This place is great, but I wish there was internet",
-                author: "Homer",
+                ans: "This is a nice questions to learn",
+                author: "Kushal",
               },
               function (err, Answer) {
                 if (err) {

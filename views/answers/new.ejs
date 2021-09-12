@@ -1,0 +1,11 @@
+<h1>
+    Post Answer
+</h1> 
+<%= question.title %> 
+<form action="/questions/<%=question._id%>/answers", method="POST">
+    <input type="text" placeholder="answer" name="answer[ans]">
+    <input type="text" placeholder="author" name="answer[author]">
+    <button>Submit!</button>
+</form>
+
+<a href="/questions">Back to All Questions</a>

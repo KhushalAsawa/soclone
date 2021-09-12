@@ -1,0 +1,10 @@
+<h1>
+    Particular Question
+</h1>
+<h1><%= question.title %></h1>
+<h2><%= question.description %></h2>   
+<h3><%= question.tags %>  </h3>
+
+<%question.answers.forEach(function (answer) {%>
+    <p><%= answer.author %> - <%= answer.ans %> </p>
+<% }) %> 

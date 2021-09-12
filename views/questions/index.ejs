@@ -1,0 +1,17 @@
+<h1>All Questions</h1>
+
+<li><a href="/">Register</a></li>
+<li><a href="/">Login</a></li>
+<li><a href="/">Logout</a></li>
+
+<a href="/questions/new">Add new Question</a>
+
+<% questions.forEach(function (questions){%>
+    <li>
+        <h1><%= questions.title %></h1>
+        <h2><%= questions.description %></h2>   
+        <h3><%= questions.tags %>  </h3>
+        <a href="/questions/<%= questions._id %> ">More Info</a>
+    </li>
+<% }); %>
+ 
